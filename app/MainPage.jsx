@@ -1,9 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
-import img from "./images/logo.png";
-import Link from "next/link";
 import img1 from "./images/IMG.png";
 import prof from "./images/prof1.jpg";
 import Typed from "typed.js";
@@ -56,7 +53,6 @@ function MainPage() {
   };
 
   const el = useRef(null);
-  const form = useRef();
   const toggletext = (name, msg) => {
     if (name == "b1") {
       setclicked1(true);
@@ -75,9 +71,7 @@ function MainPage() {
       settext(info.education);
     }
   };
-const handelsub = ()=>{
-  
-}
+
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ["Web Developer", "App Developer"],
@@ -278,7 +272,7 @@ const handelsub = ()=>{
                 
                 action="https://formspree.io/f/mbjvlwkd"
                 method="POST"
-                onSubmit={handelsub}
+                
               >
                 <label htmlFor="name" className="leading-7 text-sm text-white">
                   Name
