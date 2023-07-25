@@ -13,6 +13,9 @@ function MainPage() {
   const [clicked1, setclicked1] = useState(false);
   const [clicked2, setclicked2] = useState(false);
   const [text, settext] = useState("");
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [msg, setmsg] = useState("");
 
   const info = {
     skills: {
@@ -51,6 +54,24 @@ function MainPage() {
       ],
     },
   };
+  useEffect(() => {
+    setname("");
+    setemail("");
+    setmsg("");
+    const typed = new Typed(el.current, {
+      strings: ["Web Developer", "App Developer"],
+      typeSpeed: 70,
+      fadeOut: true,
+      fadeOutClass: "typed-fade-out",
+      fadeOutDelay: 400,
+      loop: true,
+      loopCount: Infinity,
+    });
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
 
   const el = useRef(null);
   const toggletext = (name, msg) => {
@@ -73,26 +94,10 @@ function MainPage() {
   };
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Web Developer", "App Developer"],
-      typeSpeed: 70,
-      fadeOut: true,
-      fadeOutClass: "typed-fade-out",
-      fadeOutDelay: 400,
-      loop: true,
-      loopCount: Infinity,
-    });
-
     toggletext("b1", "skills");
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
-  }, []);
+  }, [toggletext]);
   return (
     <>
-     
       <section id="home" className="p-5 h-[90vh]">
         <div className="flex flex-col-reverse md:flex-row items-center mx-auto justify-evenly text-white">
           <div className="right text-center">
@@ -268,17 +273,16 @@ function MainPage() {
                 Let's Talk
               </h2>
 
-              <form
-                
-                action="https://formspree.io/f/mbjvlwkd"
-                method="POST"
-                
-              >
+              <form action="https://formspree.io/f/mbjvlwkd" method="POST">
                 <label htmlFor="name" className="leading-7 text-sm text-white">
                   Name
                 </label>
                 <input
                   type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setname(e.target.value);
+                  }}
                   id="name"
                   name="name"
                   className="w-full mb-2 bg-slate-700 rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -288,6 +292,10 @@ function MainPage() {
                   Email
                 </label>
                 <input
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                  }}
+                  value={email}
                   type="email"
                   id="email"
                   name="email"
@@ -301,6 +309,10 @@ function MainPage() {
                   Message
                 </label>
                 <textarea
+                  onChange={(e) => {
+                    setmsg(e.target.value);
+                  }}
+                  value={msg}
                   id="message"
                   name="message"
                   className="w-full mb-2 bg-slate-700  rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-white py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
