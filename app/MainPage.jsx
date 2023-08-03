@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { useState } from "react";
 import img1 from "./images/IMG.png";
+import loco from './images/l.png'
+import wea from './images/w.png'
 import prof from "./images/prof1.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -99,7 +101,7 @@ function MainPage() {
           "service_1loe79f",
           "template_krflvak",
           templateParams,
-          "jtwkuhlHWB72-M7WG"
+          process.env.NEXT_PUBLIC_API_KEY
         )
         .then(
           () => {
@@ -232,9 +234,9 @@ function MainPage() {
               </div>
             </div>
             <div className="buttons my-1  md:flex items-center justify-center space-x-2">
-              <a href="resume.pdf" download="resume.pdf" target="_blank">
+              <a href="resume.pdf" target="_blank">
                 {" "}
-                <button className="bg-blue-600 mx-auto flex items-center justify-center  text-white rounded-md px-4 py-2">
+                <button className="bg-blue-500 hover:bg-blue-600  mx-auto flex items-center justify-center  text-white rounded-md px-4 py-2">
                   <AiOutlineCloudDownload className="mx-1 text-lg" /> Download
                   Resume
                 </button>
@@ -245,7 +247,7 @@ function MainPage() {
                 href="https://github.com/debangan03"
               >
                 {" "}
-                <button className="bg-blue-600 flex items-center justify-center  text-white rounded-md px-4 py-2">
+                <button className="bg-blue-500 hover:bg-blue-600 flex items-center justify-center  text-white rounded-md px-4 py-2">
                   <AiFillGithub className="mx-1 text-lg" /> Github
                 </button>
               </a>
@@ -263,7 +265,7 @@ function MainPage() {
         </div>
       </section>
       <hr className="border-blue-500 border-2 mx-auto w-[90%] rounded-full" />
-      <section id="about" className="p-10   h-full md:h-[85vh]">
+      <section id="about" className="p-10   h-full md:h-[85vh] ">
         <div className="md:flex  mx-auto justify-evenly text-white">
           <div className="left">
             <Image
@@ -274,15 +276,15 @@ function MainPage() {
               height={650}
             />
           </div>
-          <div className="right md:p-10 p-4">
+          <div className="right  md:p-10 p-4">
             <h1 className="text-blue-400 text-center md:text-start  font-bold text-3xl">
               About Me
             </h1>
             <p className="text-justify mb-4">
-              I am a full stack web devloper and currenty i an in <br /> 3rd
+              I am a full stack web devloper and currenty i an in <br className="md:block hidden"/> 3rd
               year B.Tech CSE in Kiit Bhubaneswar.
             </p>
-            <div>
+            <div className="h-72">
               <div
                 className="inline-flex rounded-md shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 role="group"
@@ -354,10 +356,12 @@ function MainPage() {
         <div className="lg:grid  grid-cols-3 bg-transparent lg:grid-flow-row-dense lg:gap-2 p-6   md:px-24 flex flex-wrap mt-8 ">
           <div className="h-full w-fit   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="">
-              <img
+              <Image
                 className="h-[300px] w-[400px] object-cover object-left transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
-                src="https://i.ibb.co/rbyxBRd/Screenshot-2023-07-25-233422.png"
+                src={loco}
                 alt="locokart"
+                height={900}
+                width={900}
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/20 group-hover:via-black/30 group-hover:to-black/70" />
@@ -367,17 +371,19 @@ function MainPage() {
               </h1>
 
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
-              <button className="rounded bg-blue-500  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+              <button className="rounded bg-blue-500  hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 <a href="https://locokart.vercel.app">Explore  &rarr;</a>
               </button>
             </div>
           </div>
           <div className="h-full w-fit   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="">
-              <img
+              <Image
                 className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
-                src="https://i.ibb.co/J5zqkqz/Screenshot-2023-07-14-212446.png"
+                src={wea}
                 alt="Weatherx"
+                height={900}
+                width={900}
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/20 group-hover:via-black/30 group-hover:to-black/70" />
@@ -387,7 +393,7 @@ function MainPage() {
               </h1>
 
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
-              <button className="rounded bg-blue-500  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+              <button className="rounded bg-blue-500  hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 <a href="https://weatherx-iota.vercel.app">Explore  &rarr;</a>
               </button>
             </div>
@@ -407,7 +413,7 @@ function MainPage() {
               </h1>
 
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
-              <button className="rounded bg-blue-500   py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+              <button className="rounded bg-blue-500 hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 <Link href={"https://github.com/debangan03/links"}>
                   Explore  &rarr;
                 </Link>
@@ -417,11 +423,7 @@ function MainPage() {
         </div>
         <div className="flex items-center justify-center">
           <a href="https://github.com/debangan03/">
-            <button className="relative inline-flex bg-blue-500 hover:bg-slate-700 items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-lg text-white hover:shadow-md hover:shadow-slate-500">
-              <span className="relative px-5 py-2.5 transition-all ease-in hover:bg-blue-500 duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                See Morer &rarr;
-              </span>
-            </button>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">See More &rarr;</button>
           </a>
         </div>
       </section>
@@ -454,7 +456,7 @@ function MainPage() {
                   <h2 className="title-font font-semibold text-gray-100 tracking-widest text-xs">
                     ADDRESS
                   </h2>
-                  <p className="mt-1 text-blue-500">
+                  <p className="mt-1 text-blue-500 ">
                     Guptipara,Hooghly,West Bengal,India
                   </p>
                   </div>
@@ -463,16 +465,17 @@ function MainPage() {
                   </h2>
                   <a
                     href="mailto:debangan2019@gmail.com"
-                    className="text-blue-500 leading-relaxed"
+                    
+                    className="text-blue-500 leading-relaxed hover:text-blue-400"
                   >
                     debangan2019@gmail.com
                   </a>
-                  <h2 className="title-font font-semibold text-gray-100 tracking-widest text-xs mt-4">
+                  <h2 className="title-font  font-semibold text-gray-100 tracking-widest text-xs mt-4">
                     PHONE
                   </h2>
                   <a
                     href="tel:+917699550670"
-                    className="leading-relaxed text-blue-500"
+                    className="leading-relaxed  hover:text-blue-400 text-blue-500"
                   >
                     +91 7699550670
                   </a>
@@ -490,6 +493,7 @@ function MainPage() {
                 </label>
                 <input
                   type="text"
+                  placeholder="Enter your full name"
                   value={name}
                   onChange={(e) => {
                     setname(e.target.value);
@@ -506,6 +510,7 @@ function MainPage() {
                   onChange={(e) => {
                     setemail(e.target.value);
                   }}
+                  placeholder="Enter your valid email id"
                   value={email}
                   type="email"
                   id="email"
@@ -520,6 +525,7 @@ function MainPage() {
                   Message
                 </label>
                 <textarea
+                placeholder="Enter your valueable message "
                   onChange={(e) => {
                     setmsg(e.target.value);
                   }}
