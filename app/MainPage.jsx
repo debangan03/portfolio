@@ -1,6 +1,6 @@
 "use client";
 import emailjs from "@emailjs/browser";
-import s1 from './images/s1.png'
+import link from './images/links.png'
 import Image from "next/image";
 import { useState } from "react";
 import img1 from "./images/IMG.png";
@@ -403,7 +403,7 @@ function MainPage() {
             <div className="">
             <Image
                 className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
-                src={s1}
+                src={link}
                 alt="Weatherx"
                 height={900}
                 width={900}
