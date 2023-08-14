@@ -1,5 +1,6 @@
 "use client";
 import emailjs from "@emailjs/browser";
+import s1 from './images/s1.png'
 import Image from "next/image";
 import { useState } from "react";
 import img1 from "./images/IMG.png";
@@ -400,10 +401,12 @@ function MainPage() {
           </div>
           <div className="h-full w-fit   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="">
-              <img
+            <Image
                 className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
-                src="https://i.ibb.co/p2mwG6H/S1.png"
-                alt="Mugs"
+                src={s1}
+                alt="Weatherx"
+                height={900}
+                width={900}
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/20 group-hover:via-black/30 group-hover:to-black/70" />
@@ -414,12 +417,13 @@ function MainPage() {
 
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
               <button className="rounded bg-blue-500 hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                <Link href={"https://github.com/debangan03/links"}>
+                <Link href={"https://linksmessages.vercel.app/"}>
                   Explore  &rarr;
                 </Link>
               </button>
             </div>
           </div>
+          
         </div>
         <div className="flex items-center justify-center">
           <a href="https://github.com/debangan03/">
