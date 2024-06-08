@@ -40,3 +40,6 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(46, 74, 213); 
   }
+  html {
+    scroll-behavior: smooth;
+  }

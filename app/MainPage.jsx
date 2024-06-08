@@ -1,11 +1,11 @@
 "use client";
 import emailjs from "@emailjs/browser";
-import link from './images/links.png'
+import link from "./images/links.png";
 import Image from "next/image";
 import { useState } from "react";
 import img1 from "./images/IMG.png";
-import loco from './images/l.png'
-import wea from './images/w.png'
+import loco from "./images/l.png";
+import wea from "./images/w.png";
 import prof from "./images/prof1.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,6 +16,9 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { AiFillGithub, AiOutlineCloudDownload } from "react-icons/ai";
 import Footer from "./Footer";
+import kiitswaper from "./images/kiitswapper.png";
+import pass from "./images/password.png";
+import skillearn from "./images/skillearn.png";
 function MainPage() {
   const [clicked3, setclicked3] = useState(false);
   const [clicked1, setclicked1] = useState(true);
@@ -182,7 +185,7 @@ function MainPage() {
         pauseOnHover
         theme="dark"
       />
-      <div className="md:flex z-30 justify-between px-10 w-screen items-center font-semibold shadow-lg shadow-slate-800 bg-slate-900 p-5 sticky top-0  text-white ">
+      <div className="md:flex z-30 justify-between px-10 w-screen items-center font-semibold shadow-sm shadow-slate-700 bg-slate-900 p-5 sticky top-0  text-white ">
         <Link href={"/"}>
           {" "}
           <div className="logo flex justify-center items-center space-x-2 cursor-pointer ">
@@ -206,7 +209,7 @@ function MainPage() {
             About
           </Link>
           <Link
-            href={"/#projects"}
+            href="/#projects"
             className="cursor-pointer hover:text-blue-500 hover:scale-105"
           >
             Projects
@@ -259,13 +262,13 @@ function MainPage() {
               className="lazy  md:w-full h-full w-[95%] md:mt-12  "
               src={img1}
               alt="img"
-              width={500}
-              height={550}
+              width={1500}
+              height={1550}
             />
           </div>
         </div>
       </section>
-      <hr className="border-blue-500 border-2 mx-auto w-[90%] rounded-full" />
+      <hr className="border-gray-700 border-2 mx-auto w-[90%] rounded-full" />
       <section id="about" className="p-10   h-full md:h-[85vh] ">
         <div className="md:flex  mx-auto justify-evenly text-white">
           <div className="left">
@@ -282,8 +285,9 @@ function MainPage() {
               About Me
             </h1>
             <p className="text-justify mb-4">
-              I am a full stack web devloper and currenty i an in <br className="md:block hidden"/> 3rd
-              year B.Tech CSE in Kiit Bhubaneswar.
+              I am a full stack web devloper and currenty i an in{" "}
+              <br className="md:block hidden" /> 3rd year B.Tech CSE in Kiit
+              Bhubaneswar.
             </p>
             <div className="h-72">
               <div
@@ -350,12 +354,13 @@ function MainPage() {
         </div>
       </section>{" "}
       <section className="pb-10 " id="projects">
-        <hr className="border-blue-500 border-2 mx-auto w-[90%] rounded-full" />
-        <h1 className="text-blue-400 text-center pt-2 px-20 md:text-start  font-bold text-3xl">
+        <hr className="border-gray-700 border-2  mx-auto w-[90%] rounded-full" />
+        <h1 className="text-blue-400  text-center mt-4 pt-2 px-20   font-bold text-4xl">
           Projects
         </h1>
-        <div className="lg:grid  grid-cols-3 bg-transparent lg:grid-flow-row-dense lg:gap-2 p-6   md:px-24 flex flex-wrap mt-8 ">
-          <div className="h-full w-fit   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+        <hr className="mx-auto border-2 rounded-lg w-[20%] border-blue-200 mt-1" />
+        <div className="lg:grid  grid-cols-3 bg-transparent lg:grid-flow-row-dense lg:gap-2 lg:gap-y-4 p-6   md:px-24 flex flex-wrap mt-8 ">
+          <div className="h-full w-fit border-2 border-white shadow-lg    rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="">
               <Image
                 className="h-[300px] w-[400px] object-cover object-left transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
@@ -373,11 +378,11 @@ function MainPage() {
 
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
               <button className="rounded bg-blue-500  hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                <a href="https://locokart.vercel.app">Explore  &rarr;</a>
+                <a href="https://locokart.vercel.app">Explore &rarr;</a>
               </button>
             </div>
           </div>
-          <div className="h-full w-fit   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+          <div className="h-full w-fit border-2 border-white shadow-lg    rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="">
               <Image
                 className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
@@ -395,13 +400,13 @@ function MainPage() {
 
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
               <button className="rounded bg-blue-500  hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                <a href="https://weatherx-iota.vercel.app">Explore  &rarr;</a>
+                <a href="https://weatherx-iota.vercel.app">Explore &rarr;</a>
               </button>
             </div>
           </div>
-          <div className="h-full w-fit   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+          <div className="h-full w-fit border-2 border-white shadow-lg     rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="">
-            <Image
+              <Image
                 className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
                 src={link}
                 alt="Weatherx"
@@ -418,24 +423,99 @@ function MainPage() {
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
               <button className="rounded bg-blue-500 hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                 <Link href={"https://linksmessages.vercel.app/"}>
-                  Explore  &rarr;
+                  Explore &rarr;
                 </Link>
               </button>
             </div>
           </div>
-          
+          <div className="h-full w-fit border-2 border-white shadow-lg    rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div className="">
+              <Image
+                className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
+                src={kiitswaper}
+                alt="kiitswapper"
+                height={900}
+                width={900}
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/20 group-hover:via-black/30 group-hover:to-black/70" />
+            <div className="absolute inset-0 flex translate-y-[120%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 className="font-dmserif text-3xl font-bold text-white">
+                Kiit Swapper
+              </h1>
+
+              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
+              <button className="rounded bg-blue-500 hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <Link href={"https://kiitswapper.vercel.app/"}>
+                  Explore &rarr;
+                </Link>
+              </button>
+            </div>
+          </div>
+          <div className="h-full w-fit border-2 border-white shadow-lg    rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div className="">
+              <Image
+                className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
+                src={pass}
+                alt="kiitswapper"
+                height={900}
+                width={900}
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/20 group-hover:via-black/30 group-hover:to-black/70" />
+            <div className="absolute inset-0 flex translate-y-[120%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 className="font-dmserif text-3xl font-bold text-white">
+                password Manager
+              </h1>
+
+              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
+              <button className="rounded bg-blue-500 hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <Link href={"https://github.com/passwordmanager"}>
+                  Explore &rarr;
+                </Link>
+              </button>
+            </div>
+          </div>
+
+          <div className="h-full w-fit border-2 border-white shadow-lg   rounded-lg mb-2 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div className="">
+              <Image
+                className="h-[300px] w-[400px] object-cover transition-transform duration-500 group-hover:rotate-1 group-hover:scale-125"
+                src={skillearn}
+                alt="kiitswapper"
+                height={900}
+                width={900}
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/20 group-hover:via-black/30 group-hover:to-black/70" />
+            <div className="absolute inset-0 flex translate-y-[120%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 className="font-dmserif text-3xl font-bold text-white">
+                Skill Earner
+              </h1>
+
+              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"></p>
+              <button className="rounded bg-blue-500 hover:bg-blue-600  py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <Link href={"https://github.com/skillearner"}>
+                  Explore &rarr;
+                </Link>
+              </button>
+            </div>
+          </div>
         </div>
         <div className="flex items-center justify-center">
           <a href="https://github.com/debangan03/">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">See More &rarr;</button>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+              See More &rarr;
+            </button>
           </a>
         </div>
       </section>
       <hr className="border-blue-500 border-2 mx-auto w-[90%] rounded-full" />
       <section className="contact md:px-20 px-2" id="contact">
-        <h1 className="text-blue-400 text-center pt-2 md:text-start  font-bold text-3xl">
+      <h1 className="text-blue-400  text-center mt-4 pt-2 px-20   font-bold text-4xl">
           Contact Me
         </h1>
+        <hr className="mx-auto border-2 rounded-lg w-[20%] border-blue-200 mt-1" />
         <section className="text-gray-800 body-font rounded relative">
           <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
             <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -457,19 +537,18 @@ function MainPage() {
                 </div>
                 <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                   <div className="md:hidden py-2">
-                  <h2 className="title-font font-semibold text-gray-100 tracking-widest text-xs">
-                    ADDRESS
-                  </h2>
-                  <p className="mt-1 text-blue-500 ">
-                    Guptipara,Hooghly,West Bengal,India
-                  </p>
+                    <h2 className="title-font font-semibold text-gray-100 tracking-widest text-xs">
+                      ADDRESS
+                    </h2>
+                    <p className="mt-1 text-blue-500 ">
+                      Guptipara,Hooghly,West Bengal,India
+                    </p>
                   </div>
                   <h2 className="title-font font-semibold text-gray-100 tracking-widest text-xs">
                     EMAIL
                   </h2>
                   <a
                     href="mailto:debangan2019@gmail.com"
-                    
                     className="text-blue-500 leading-relaxed hover:text-blue-400"
                   >
                     debangan2019@gmail.com
@@ -529,7 +608,7 @@ function MainPage() {
                   Message
                 </label>
                 <textarea
-                placeholder="Enter your valueable message "
+                  placeholder="Enter your valueable message "
                   onChange={(e) => {
                     setmsg(e.target.value);
                   }}
